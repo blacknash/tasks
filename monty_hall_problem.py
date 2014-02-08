@@ -17,15 +17,6 @@ def goat_door(prizes,guesses):
             		return result
         	result[bad] = np.random.randint(0, 3, bad.sum())
 
-#def switch_guess(prizes,guesses):
-#	r = range(max_doors)
-#	response = []	
-#	for p,g in it.izip(prizes,guesses):
-#		diff = list(set(r)-set([p,g]))
-#		choice = np.random.choice(diff,1)[0]
-#		response.append(choice)
-#	return response
-
 def switch_guess(guesses, goatdoors):
     result = np.zeros(guesses.size)
     switch = {(0, 1): 2, (0, 2): 1, (1, 0): 2, (1, 2): 1, (2, 0): 1, (2, 1): 0}
